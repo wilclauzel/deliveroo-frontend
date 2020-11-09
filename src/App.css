@@ -1,38 +1,205 @@
-.App {
-  text-align: center;
+/* Common */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  line-height: 26.7px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2e3333;
+}
+h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  line-height: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #2e3333;
+}
+h3 {
+  margin-bottom: 10px;
+  line-height: 22px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #2e3333;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Header */
+header {
+  height: 60px;
+  width: 100vw;
+  border-bottom: 1px solid #e9ebeb;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+}
+header div {
+  height: 100%;
+  width: 96vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  height: 70%;
+}
+/* Restaurant */
+.restaurant {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 7px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.restaurant > div > p {
+  line-height: 28.8px;
+  font-size: 19px;
+  color: #868a8a;
+}
+.restaurant img {
+  height: 230px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 45px;
+}
+
+/* Product category */
+.categories {
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #f4f5f5;
+}
+.categories > div {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* Meals */
+.meals {
+  width: calc(96vw - 300px);
+  max-width: 820px;
+  min-width: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* border: 2px red solid; */
+}
+.meal {
+  height: 160px;
+  width: 400px;
+  padding: 5px;
+  padding-top: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 7px;
+  /* border: 2px black solid; */
+}
+.meal > div {
+  padding: 5px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* border: 2px green solid; */
+}
+.meal img {
+  height: 130px;
+  width: 130px;
+  border-radius: 7px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.meal > div > p {
+  height: 34px;
+  font-size: 14px;
+  line-height: 16px;
+  color: #808484;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.meal > div > div {
+  display: flex;
+  align-items: baseline;
+}
+.price {
+  margin-top: 10px;
+  font-size: 17px;
+  line-height: 14.7px;
+  color: #808484;
+}
+.popular {
+  color: #ff8000;
+  margin-left: 25px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.popular-symbol {
+  font-size: 18px;
+  font-weight: 800;
+}
+.popular-text {
+  font-size: 12px;
+  margin-left: 5px;
+  line-height: 10.7px;
+  font-weight: 900;
+}
+
+@media (max-width: 764px) {
+  .restaurant {
+    width: 96vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+  .restaurant img {
+    margin-top: 15px;
+    height: 230px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 5px;
+    /* margin-left: 45px; */
+  }
+  .categories > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .meals {
+    width: calc(96vw - 300px);
+    max-width: 820px;
+    min-width: 430px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 2px red solid; */
   }
 }

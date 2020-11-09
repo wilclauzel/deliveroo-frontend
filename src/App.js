@@ -1,23 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Restaurant from "./components/Restaurant";
+import Header from "./components/Header";
+import ProductCategories from "./components/ProductCategories";
+
+const URL = "https://wilclauzel-deliveroo.herokuapp.com/";
+
+const getData = async (setData, setIsLoading) => {
+  try {
+    const response = await axios.get(URL);
+    setData(response.data.data);
+    setIsLoading(false);
+    console.log(response.data.data);
+  } catch (error) {
+    alert("Les données de la page ne peuvent être chargées");
+    console.log(error);
+  }
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  const [data, setData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    getData(setData, setIsLoading);
+  }, []);
+
+  return isLoading ? (
+    <div>Chargement encours</div>
+  ) : (
+    <div className="wrapper">
+      <Header />
+      <Restaurant restaurant={data.restaurant} />
+      <ProductCategories categories={data.categories} />
     </div>
   );
 }
