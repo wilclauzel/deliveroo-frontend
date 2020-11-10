@@ -1,0 +1,31 @@
+.restaurant {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 7px auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.restaurant > div > p {
+  line-height: 28.8px;
+  font-size: 19px;
+  color: #868a8a;
+}
+.restaurant img {
+  height: 230px;
+  width: 350px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-left: 45px;
+}
+
+@media (max-width: 764px) {
+  .restaurant {
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .restaurant img {
+    margin-top: 15px;
+  }
+}

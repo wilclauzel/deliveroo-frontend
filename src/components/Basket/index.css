@@ -1,0 +1,66 @@
+.basket-empty,
+.basket {
+  /* height: auto; */
+  width: 350px;
+  background-color: white;
+  position: sticky;
+  margin-top: 30px;
+  top: 30px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.basket-empty {
+  height: 185px;
+}
+.basket-empty > button,
+.basket > button {
+  width: 330px;
+  height: 50px;
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 13.3px;
+  font-weight: 800;
+  border-radius: 7px;
+}
+.basket-empty > button {
+  background-color: #bac3c3;
+  color: #8b9a9b;
+}
+.basket > button {
+  background-color: #02cdbd;
+  color: white;
+}
+.basket-empty > p {
+  height: 130px;
+  color: #8b9a9b;
+  text-align: center;
+  display: flex;
+  align-items: center;
+}
+.separator {
+  width: 330px;
+  margin: 10px 0;
+  border-bottom: 1px solid #bac3c3;
+}
+.resume {
+  width: 330px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resume > p {
+  margin: 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@media (max-width: 830px) {
+  .basket-empty,
+  .basket {
+    width: 400px;
+    margin: 30px auto;
+  }
+}

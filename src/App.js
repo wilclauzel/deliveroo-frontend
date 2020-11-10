@@ -1,9 +1,10 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import Restaurant from "./components/Restaurant";
-import Header from "./components/Header";
-import ProductCategories from "./components/ProductCategories";
+
+import Restaurant from "./components/Restaurant/Restaurant";
+import Header from "./components/Header/Header";
+import Menu from "./components/Menu/Menu";
 
 const URL = "https://wilclauzel-deliveroo.herokuapp.com/";
 
@@ -12,7 +13,6 @@ const getData = async (setData, setIsLoading) => {
     const response = await axios.get(URL);
     setData(response.data.data);
     setIsLoading(false);
-    console.log(response.data.data);
   } catch (error) {
     alert("Les données de la page ne peuvent être chargées");
     console.log(error);
@@ -33,7 +33,7 @@ function App() {
     <div className="wrapper">
       <Header />
       <Restaurant restaurant={data.restaurant} />
-      <ProductCategories categories={data.categories} />
+      <Menu menuCategories={data.categories} />
     </div>
   );
 }

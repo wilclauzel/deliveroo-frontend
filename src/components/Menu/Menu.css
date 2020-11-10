@@ -1,0 +1,25 @@
+.menu {
+  width: 100vw;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  background-color: #f4f5f5;
+}
+.menu > div {
+  width: 96vw;
+  max-width: 1200px;
+  margin: 7px auto;
+  display: flex;
+  justify-content: flex-start;
+}
+.basket-small {
+  display: none;
+}
+
+@media (max-width: 830px) {
+  .basket-small {
+    display: flex;
+  }
+  .basket-std {
+    display: none;
+  }
+}
