@@ -19,13 +19,14 @@
   margin-left: 45px;
 }
 
-@media (max-width: 764px) {
+@media (max-width: 830px) {
   .restaurant {
     margin: 10px;
     flex-direction: column;
     justify-content: center;
   }
   .restaurant img {
+    margin: 0 auto;
     margin-top: 15px;
   }
 }

@@ -16,6 +16,10 @@
 }
 
 @media (max-width: 830px) {
+  .menu > div {
+    justify-content: center;
+    align-items: center;
+  }
   .basket-small {
     display: flex;
   }

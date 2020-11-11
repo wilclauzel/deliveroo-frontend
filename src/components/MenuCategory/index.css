@@ -14,17 +14,17 @@
   flex-wrap: wrap;
   /* border: 2px red solid; */
 }
-@media (max-width: 764px) {
+@media (max-width: 830px) {
   .menu-category {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-right: 0;
   }
   .menu-category > div {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border: 2px red solid; */
   }
 }
